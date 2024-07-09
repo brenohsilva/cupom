@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vale Uma Esfirra</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+        .coupon {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .coupon::before, .coupon::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            background-color: #f0f0f0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .coupon::before {
+            left: -20px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .coupon::after {
+            right: -20px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .coupon h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .requirements {
+            text-align: center;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .requirements ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .requirements li {
+            margin: 10px 0;
+        }
+        .cta-button {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #ff4d4d;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="coupon">
+        <h1>Vale Uma Esfirra</h1>
+    </div>
+    <div class="requirements">
+        <p>Requisitos para ganhar esse cupom:</p>
+        <ul>
+            <li>Ser o amor da vida de um cara chamado Breno;</li>
+            <li>Estar completando 7 meses de namoro;</li>
+            <li>Ser a mulher mais linda desse mundo</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send/?phone=558193329798&text=Feliz+7+meses+meu+amor!+<3&type=phone_number&app_absent=0" class="cta-button">Clique aqui</a>
+    </div>
+    <script>
+        function checkRequirements() {
+            alert("Parabéns! Você cumpriu todos os requisitos e ganhou uma esfirra!");
+        }
+    </script>
+</body>
+</html>
